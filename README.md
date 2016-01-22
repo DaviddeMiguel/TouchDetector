@@ -1,5 +1,35 @@
 # TouchDetector
-Library that helps to catch all the touch events in the screen
+A framework used to detect all touch events in the screen with a single line in your code `TouchDetector.bind(this);`.
+
+##Usage
+````
+
+public class LoginActivity extends AppCompatActivity {
+  @Override protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_login);
+    TouchDetector.bind(this);
+  }
+}
+
+````
+
+##Setup
+- Add the module `touch-detector-core` to your project
+- Add `compile project(':touch-detector-core')` to your `build.gradle` file
+
+####Gradle (not available yet)
+- Add `compile 'com.github.DaviddeMiguel:touch-detector-core:0.0.1'` to your `build.gradle` file
+
+####Maven (not available yet)
+````
+<dependency>
+    <groupId>com.github.lawloretienne</groupId>
+    <artifactId>trestle</artifactId>
+    <version>0.0.7</version>
+</dependency>
+````
+
 
 ````
 Copyright 2016 David de Miguel Galán
