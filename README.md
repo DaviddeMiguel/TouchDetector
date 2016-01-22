@@ -24,9 +24,9 @@ public class LoginActivity extends AppCompatActivity {
 ####Maven (not available yet)
 ````
 <dependency>
-    <groupId>com.github.lawloretienne</groupId>
-    <artifactId>trestle</artifactId>
-    <version>0.0.7</version>
+    <groupId>com.github.DaviddeMiguel</groupId>
+    <artifactId>touch-detector-core</artifactId>
+    <version>0.0.1</version>
 </dependency>
 ````
 
