@@ -14,6 +14,9 @@ public class LoginActivity extends AppCompatActivity {
 
 ````
 
+##Show me the JSON
+![Alt text](/sample/screenshots/screenshot_showme_the_json.png?raw=true "Show me the JSON")
+
 ##Setup
 - Add the module `touch-detector-core` to your project
 - Add `compile project(':touch-detector-core')` to your `build.gradle` file
