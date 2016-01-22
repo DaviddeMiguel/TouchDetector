@@ -5,6 +5,10 @@ import com.meslize.touchdetector.core.domain.model.TouchModel;
 
 public class TouchEntityMapper {
   public TouchEntity map(TouchModel data) {
-    return new TouchEntity(data.getTimeInMillis(), data.getX(), data.getY());
+    return new TouchEntity.Builder().withTimeInMillis(data.getTimeInMillis())
+        .withX(data.getX())
+        .withY(data.getY())
+        .withType(data.getType())
+        .build();
   }
 }

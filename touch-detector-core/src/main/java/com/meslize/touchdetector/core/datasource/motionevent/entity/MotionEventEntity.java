@@ -4,23 +4,42 @@ import android.view.MotionEvent;
 import java.util.Calendar;
 
 public class MotionEventEntity {
-  private final long mTimeInMillis;
-  private final MotionEvent mMotionEvent;
+
+  public static final String TYPE_DOWN = "DOWN";
+  public static final String TYPE_MOVE = "MOVE";
+  public static final String TYPE_UP = "UP";
+  public static final String TYPE_UNKNOWN = "UNKNOWN";
+
+  private final long timeInMillis;
+  private final MotionEvent motionEvent;
 
   public MotionEventEntity(MotionEvent motionEvent) {
-    this.mTimeInMillis = Calendar.getInstance().getTimeInMillis();
-    this.mMotionEvent = motionEvent;
+    this.timeInMillis = Calendar.getInstance().getTimeInMillis();
+    this.motionEvent = motionEvent;
   }
 
   public long getTimeInMillis() {
-    return mTimeInMillis;
+    return timeInMillis;
   }
 
   public float getX() {
-    return mMotionEvent.getX();
+    return motionEvent.getX();
   }
 
   public float getY() {
-    return mMotionEvent.getY();
+    return motionEvent.getY();
+  }
+
+  public String getType() {
+    switch (motionEvent.getAction()) {
+      case MotionEvent.ACTION_DOWN:
+        return TYPE_DOWN;
+      case MotionEvent.ACTION_MOVE:
+        return TYPE_MOVE;
+      case MotionEvent.ACTION_UP:
+        return TYPE_UP;
+      default:
+        return TYPE_UNKNOWN;
+    }
   }
 }
