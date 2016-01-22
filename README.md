@@ -1,5 +1,5 @@
 # TouchDetector
-A framework used to detect all touch events in the screen with a single line in your code `TouchDetector.bind(this);`.
+A framework used to detect all touch events in the screen with a single line in your code `TouchDetector.bind(this);`
 
 ##Usage
 ````
